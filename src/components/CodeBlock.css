@@ -1,0 +1,97 @@
+/* CodeBlock.css */
+.code-block {
+  margin: 12px 0;
+  border-radius: 6px;
+  overflow: hidden;
+  background-color: #282c34;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.code-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  background-color: #21252b;
+  color: #abb2bf;
+}
+
+.code-language {
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.copy-button {
+  background: none;
+  border: none;
+  color: #abb2bf;
+  cursor: pointer;
+  padding: 4px 8px;
+  font-size: 14px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.copy-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+pre {
+  margin: 0;
+  padding: 16px;
+  overflow-x: auto;
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #abb2bf;
+}
+
+code {
+  font-family: inherit;
+  white-space: pre;
+}
+
+/* Syntax highlighting (basic) */
+.language-js .keyword,
+.language-javascript .keyword,
+.language-python .keyword,
+.language-java .keyword {
+  color: #c678dd;
+}
+
+.language-js .string,
+.language-javascript .string,
+.language-python .string,
+.language-java .string {
+  color: #98c379;
+}
+
+.language-js .comment,
+.language-javascript .comment,
+.language-python .comment,
+.language-java .comment {
+  color: #5c6370;
+  font-style: italic;
+}
+
+.language-js .number,
+.language-javascript .number,
+.language-python .number,
+.language-java .number {
+  color: #d19a66;
+}
+
+.language-js .function,
+.language-javascript .function,
+.language-python .function,
+.language-java .function {
+  color: #61afef;
+}
+
+@media (max-width: 768px) {
+  pre {
+    padding: 12px;
+    font-size: 12px;
+  }
+}

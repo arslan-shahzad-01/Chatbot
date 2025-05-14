@@ -1,0 +1,115 @@
+/* Message.css */
+.message {
+  display: flex;
+  gap: 12px;
+  padding: 16px;
+  border-radius: 8px;
+  max-width: 100%;
+  animation: fade-in 0.3s ease;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.bot-message {
+  background-color: var(--bot-message-bg);
+}
+
+.user-message {
+  background-color: var(--user-message-bg);
+}
+
+.message.error {
+  border-left: 4px solid var(--error-color);
+}
+
+.message-icon {
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: rgba(0, 123, 255, 0.1);
+  color: var(--primary-color);
+}
+
+.user-message .message-icon {
+  background-color: rgba(0, 123, 255, 0.2);
+}
+
+.message-content {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.message-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+}
+
+.message-sender {
+  font-weight: 600;
+}
+
+.message-time {
+  color: var(--secondary-color);
+}
+
+.message-text {
+  font-size: 15px;
+  line-height: 1.5;
+  word-break: break-word;
+  white-space: pre-wrap;
+}
+
+.message-text a {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+.message-text h1, .message-text h2, .message-text h3 {
+  margin-top: 16px;
+  margin-bottom: 8px;
+}
+
+.message-text ol, .message-text ul {
+  margin-left: 20px;
+  margin-bottom: 16px;
+}
+
+.message-text p {
+  margin-bottom: 12px;
+}
+
+.cursor-blink {
+  display: inline-block;
+  width: 2px;
+  height: 16px;
+  background-color: var(--text-color);
+  animation: blink 1s infinite;
+  vertical-align: middle;
+  margin-left: 2px;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+@media (max-width: 768px) {
+  .message {
+    padding: 12px;
+  }
+  
+  .message-text {
+    font-size: 14px;
+  }
+}
